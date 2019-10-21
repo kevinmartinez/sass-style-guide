@@ -1,0 +1,34 @@
+// Global config
+// ==============================
+
+// Font stacks
+$font-url-google          : 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700&display=swap';
+
+
+// Font
+$font-family--primary     : 'Helvetica Neue', 'Open Sans', Arial, sans-serif;
+
+// Font weights
+$font-weight--thin        : 100;
+$font-weight--light       : 300;
+$font-weight--medium      : 400;
+$font-weight--bold        : 700;
+$font-weight--ultra-bold  : 900;
+
+// Descriptive base colors
+
+$white          : hsla(0, 0%, 100%);
+$black          : hsla(0, 0%, 4%);
+$grey           : hsla(187, 5%, 63%);
+
+$viking         : hsla(163, 64%, 63%);
+$piction-blue   : hsla(189, 79%, 60%);
+$ocean-green    : hsla(154, 49%, 49%);
+$chestnut-rose  : hsla(350, 50%, 58%);
+$flame-pea      : hsla(15, 71%, 55%);
+$lavender-purple: hsla(250, 30%, 61%);
+$steel-blue     : hsla(202, 44%, 48%);
+$light-wisteria : hsla(281, 44%, 70%);
+
+$color--primary   : $viking;
+$color--secondary : $piction-blue;
