@@ -18,7 +18,7 @@ $font-weight--ultra-bold  : 900;
 // Descriptive base colors
 
 $white          : hsla(0, 0%, 100%);
-$black          : hsla(0, 0%, 4%);
+$black          : hsla(0, 0%, 40%);
 $grey           : hsla(187, 5%, 63%);
 
 $viking         : hsla(163, 64%, 63%);
@@ -70,15 +70,7 @@ $palettes: (
     'base': $lavender-purple,
     'dark': darken($lavender-purple, 10%),
     'light': lighten($lavender-purple, 10%)
-  ),
-  // 'steel-blue': (
-  //   'base': $steel-blue,
-  //   'dark': darken($steel-blue, 10%),
-  // ),
-  // 'light-wisteria': (
-  //   'base': $light-wisteria,
-  //   'dark': darken($steel-blue, 10%),
-  // ),
+  )
 );
 
 $grid-colors: (
