@@ -1,0 +1,9 @@
+/* Elements need to be hidden but screen readers must read out the information */
+
+.hidden {
+  /* Visually hide this content */
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
