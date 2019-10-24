@@ -1,0 +1,27 @@
+// TODO 
+// In your placeholder partial, create placeholders for at least the following:
+
+// *Links
+%no-decoration {
+  text-decoration: none;
+}
+// *Images
+%img-default {
+  max-width: 100%;
+  height: auto;
+}
+
+%img-margin-medium {
+  margin-bottom: em(28px)
+}
+
+%img-margin-large {
+  margin-bottom: em(40px)
+}
+// *Headlines
+// *Nav items
+%nav-item-default {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 90%;
+}

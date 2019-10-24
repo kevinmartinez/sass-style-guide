@@ -1,0 +1,19 @@
+.img {
+  &--logo {
+    @extend %img-default;
+    @extend %img-margin-large;
+  }
+
+  &--avatar {
+    @extend %img-default;
+    @extend %img-margin-large;
+    @include center-element;
+    display: inline-block;
+  }
+  
+  &--frame {
+    @extend %img-default;
+    @extend %img-margin-medium;
+  }
+
+}

@@ -1,0 +1,14 @@
+.headline {
+  &--primary {
+    font-family: $font-family--primary;
+    font-size: em(32px);
+    color: palette('viking');
+    padding: 0 10%;
+  }
+  &--secondary {
+    font-family: $font-family--primary;
+    font-size: em(20px);
+    font-weight: $font-weight--light;
+    padding: 0 8%;
+  }
+}

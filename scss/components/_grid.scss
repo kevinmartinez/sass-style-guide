@@ -1,0 +1,18 @@
+.container {
+  padding: 10% 5%;
+}
+
+.grid__row {
+  // display: flex;
+  // flex-direction: column;
+
+  // @media (min-width: 768px) {
+  //   flex-direction: row;
+  // }
+}
+
+.theme__colors {
+  &.grid__col {
+    @include bg-colors($grid-colors);
+  }
+}

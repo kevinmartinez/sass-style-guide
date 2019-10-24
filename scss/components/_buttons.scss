@@ -1,0 +1,17 @@
+.btn {
+  @include bg-colors($ui-colors) {
+    @include border-radius;
+    color: white;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-bottom: em(25px, 15px);
+    border: 0;
+    text-transform: uppercase;
+    font-family: $font-family--primary;
+    font-size: em(15px);
+    font-weight: $font-weight--bold;
+    display: block;
+    width: 100%;
+    // TODO Extend center
+  }
+}

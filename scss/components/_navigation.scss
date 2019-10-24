@@ -1,0 +1,34 @@
+.nav {
+  list-style-type: none;
+  padding: 0;
+  // TODO Create helper/mixin/extend
+  text-align: center;
+
+  &__item {
+    @extend %nav-item-default;
+    @include border-radius;
+    @include center-element;
+    // TODO Extend center
+
+    a {
+      @extend %no-decoration;
+      font-family: $font-family--primary;
+      font-weight: $font-weight--light;
+      letter-spacing: .5px;
+
+      &:hover {
+        color: palette('viking');
+      }
+    }
+
+    // Active button
+    &:first-child {
+      background-color: palette('viking');
+
+      a {
+        color: $white;
+        font-weight: $font-weight--medium;
+      }
+    }
+  }
+}

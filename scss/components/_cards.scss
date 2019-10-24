@@ -1,0 +1,8 @@
+.card {
+    a {
+    @extend %no-decoration;
+    color: red;
+    font-weight: $font-weight--bold;
+    color: palette('piction-blue');
+  }
+}
