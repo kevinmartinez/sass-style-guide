@@ -35,8 +35,8 @@ $color--secondary : $piction-blue;
 
 // Text
 
-$base__font-size: 16px;
-$base__line: 24px;
+$base__font-size  : 16px;
+$base__line       : 24px;
 
 // Layout
 
@@ -44,34 +44,38 @@ $border-radius: 5px;
 
 // Color Palette
 $palettes: (
-  'viking': (
-    'light': lighten($viking, 10%),
-    'base': $viking,
-    'dark': darken($viking, 10%),
+  'viking'  : (
+    'light' : lighten($viking, 10%),
+    'base'  : $viking,
+    'dark'  : darken($viking, 10%),
   ),
   'piction-blue': (
-    'base': $piction-blue,
-    'dark': darken($piction-blue, 10%),
-    'light': lighten($piction-blue, 10%)
+    'base'  : $piction-blue,
+    'dark'  : darken($piction-blue, 10%),
+    'light' : lighten($piction-blue, 10%)
   ),
   'ocean-green': (
-    'base': $ocean-green,
-    'dark': darken($ocean-green, 10%),
+    'base'  : $ocean-green,
+    'dark'  : darken($ocean-green, 10%),
   ),
   'chestnut-rose': (
-    'base': $chestnut-rose,
-    'dark': darken($chestnut-rose, 10%),
+    'base'  : $chestnut-rose,
+    'dark'  : darken($chestnut-rose, 10%),
   ),
   'flame-pea': (
-    'base': $flame-pea,
-    'dark': darken($flame-pea, 10%),
+    'base'  : $flame-pea,
+    'dark'  : darken($flame-pea, 10%),
   ),
   'lavender-purple': (
-    'base': $lavender-purple,
-    'dark': darken($lavender-purple, 10%),
-    'light': lighten($lavender-purple, 10%)
+    'base'  : $lavender-purple,
+    'dark'  : darken($lavender-purple, 10%),
+    'light' : lighten($lavender-purple, 10%)
   )
 );
+
+// Grid
+
+$grid-columns: 12;
 
 $grid-colors: (
   '4': palette('viking', 'dark'),
@@ -80,9 +84,14 @@ $grid-colors: (
 
 // Theme map
 $ui-colors: (
-  'default': $piction-blue,
-  'success': $ocean-green,
-  'error': $chestnut-rose,
-  'warning': $flame-pea,
-  'info': $lavender-purple,
+  'default' : $piction-blue,
+  'success' : $ocean-green,
+  'error'   : $chestnut-rose,
+  'warning' : $flame-pea,
+  'info'    : $lavender-purple,
 );
+
+// Breakpoints
+
+$breakpoint-medium  : 768px;
+$breakpoint-large   : 1468px;
