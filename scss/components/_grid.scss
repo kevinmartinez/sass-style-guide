@@ -1,14 +1,23 @@
-.container {
-  padding: 10% 5%;
+@for $i from 1 through $grid-columns {
+  .grid__col--#{$i} {
+    @include border-radius;
+
+    // Grid columns
+    grid-column: span #{$i};
+    // TODO extend/mixin paddings for showcasing grid and buttons
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
 }
 
 .grid__row {
-  // display: flex;
-  // flex-direction: column;
+  display: grid;
+  grid-template-columns: (1fr);
 
-  // @media (min-width: 768px) {
-  //   flex-direction: row;
-  // }
+  @include media-query('medium') {
+    grid-template-columns: repeat(12, 1fr);
+  }
+  
 }
 
 .theme__colors {

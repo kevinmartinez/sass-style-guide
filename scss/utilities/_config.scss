@@ -75,7 +75,8 @@ $palettes: (
 
 // Grid
 
-$grid-columns: 12;
+$container-max-width  : 1024px;
+$grid-columns         : 12;
 
 $grid-colors: (
   '4': palette('viking', 'dark'),
@@ -93,5 +94,5 @@ $ui-colors: (
 
 // Breakpoints
 
-$breakpoint-medium  : 768px;
-$breakpoint-large   : 1468px;
+$breakpoint-medium  : 769px;
+$breakpoint-large   : 1500px;

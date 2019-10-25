@@ -25,3 +25,20 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+// Media queries
+@mixin media-query($breakpoint) {
+
+  // Conditional, so we can adress breakpoints with strings as argument
+  @if $breakpoint == 'medium' {
+    @media (min-width: $breakpoint-medium) {
+      @content;
+    }
+  }
+  @else if $breakpoint == 'large' {
+    @media (min-width: $breakpoint-large) {
+      @content;
+    }
+  }
+  
+}

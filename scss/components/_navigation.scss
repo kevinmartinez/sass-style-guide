@@ -3,6 +3,13 @@
   padding: 0;
   // TODO Create helper/mixin/extend
   text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  @include media-query('medium') {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
 
   &__item {
     @extend %nav-item-default;

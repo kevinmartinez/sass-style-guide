@@ -1,0 +1,11 @@
+.container {
+  padding: 10% 5%;
+
+  // Test media query mixin
+  @include media-query('medium') {
+    padding-top: 5%;
+    max-width: $container-max-width;
+    @include center-element;
+  }
+
+}
