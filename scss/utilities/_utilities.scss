@@ -17,8 +17,9 @@
   }
 }
 
-@mixin border-radius {
-  border-radius: $border-radius;
+// Optional value argument if needed
+@mixin border-radius($value: $default-radius) {
+  border-radius: $value;
 }
 
 @mixin center-element {
