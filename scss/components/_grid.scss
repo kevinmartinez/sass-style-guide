@@ -4,7 +4,7 @@
   grid-template-rows: auto;
   grid-row-gap: 20px; // TODO 'row-gap' unsupported?
   margin-bottom: em(10px);
-
+  
   // Gap for last row (grid-row-gap is top only)
   &:last-of-type {
     justify-content: space-between;
@@ -22,7 +22,6 @@
 
 @for $i from 1 through $grid-columns {
   .grid__col--#{$i} {
-    @include border-radius;
 
     //TODO Remove helper
     border: 1px solid red;
