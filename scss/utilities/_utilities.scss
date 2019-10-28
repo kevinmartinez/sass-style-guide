@@ -12,6 +12,8 @@
   @each $theme, $color in $map {
     &--#{$theme} {
       background-color: $color;
+      // Include border radius for all bg colored showcase elements (grid & buttons)
+      @include border-radius;
       @content;
     }
   }
