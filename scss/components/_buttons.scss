@@ -1,6 +1,6 @@
 .btn {
   @include bg-colors($ui-colors) {
-    @include border-radius;
+    @include center-element;
     color: white;
     padding-top: 12px;
     padding-bottom: 12px;
@@ -11,9 +11,12 @@
     font-size: em(15px);
     font-weight: $font-weight--bold;
     display: block;
-    width: 100%;
-    // TODO Extend center
+    width: 96%;
     
- 
+    @include media-query('medium') {
+      display: inline-block;
+      max-width: 15%;
+      margin-left: 3.8%;
+    }
   }
 }
