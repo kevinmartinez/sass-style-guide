@@ -2,13 +2,16 @@
 // ==============================
 
 // Font stacks
+
 $font-url-google          : 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700&display=swap';
 
 
 // Font
+
 $font-family--primary     : 'Helvetica Neue', 'Open Sans', Helvetica, Arial, sans-serif;
 
 // Font weights
+
 $font-weight--thin        : 100;
 $font-weight--light       : 300;
 $font-weight--medium      : 400;
@@ -27,8 +30,7 @@ $ocean-green    : hsla(154, 49%, 49%);
 $chestnut-rose  : hsla(350, 50%, 58%);
 $flame-pea      : hsla(15, 71%, 55%);
 $lavender-purple: hsla(250, 30%, 61%);
-// $steel-blue     : hsla(202, 44%, 48%);
-// $light-wisteria : hsla(281, 44%, 70%);
+$wisteria       : hsla(281, 44%, 70%);
 
 $color--primary   : $viking;
 $color--secondary : $piction-blue;
@@ -43,47 +45,65 @@ $base__line       : 24px;
 $default-radius: 5px;
 
 // Color Palette
+
 $palettes: (
   'viking'  : (
-    'light' : lighten($viking, 10%),
-    'base'  : $viking,
-    'dark'  : darken($viking, 10%),
+    'light'   : lighten($viking, 10%),
+    'base'    : $viking,
+    'dark'    : darken($viking, 10%),
   ),
   'piction-blue': (
-    'base'  : $piction-blue,
-    'dark'  : darken($piction-blue, 10%),
-    'light' : lighten($piction-blue, 10%)
+    'light'   : lighten($piction-blue, 10%),
+    'base'    : $piction-blue,
+    'dark'    : darken($piction-blue, 10%),
+    'x-dark'  : darken($piction-blue, 15%),
   ),
   'ocean-green': (
-    'base'  : $ocean-green,
-    'dark'  : darken($ocean-green, 10%),
+    'base'    : $ocean-green,
+    'dark'    : darken($ocean-green, 10%),
+    'light'   : lighten($ocean-green, 10%),
+    'x-light' : lighten($ocean-green, 15%),
   ),
   'chestnut-rose': (
-    'base'  : $chestnut-rose,
-    'dark'  : darken($chestnut-rose, 10%),
+    'x-light' : lighten($chestnut-rose, 15%),
+    'light'   : lighten($chestnut-rose, 10%),
+    'base'    : $chestnut-rose,
+    'dark'    : darken($chestnut-rose, 10%),
   ),
   'flame-pea': (
-    'base'  : $flame-pea,
-    'dark'  : darken($flame-pea, 10%),
+    'light'   : lighten($flame-pea, 10%),
+    'base'    : $flame-pea,
+    'dark'    : darken($flame-pea, 10%),
   ),
   'lavender-purple': (
-    'base'  : $lavender-purple,
-    'dark'  : darken($lavender-purple, 10%),
-    'light' : lighten($lavender-purple, 10%)
+    'base'    : $lavender-purple,
+    'dark'    : darken($lavender-purple, 10%),
+    'light'   : lighten($lavender-purple, 10%)
+  ),
+  'wisteria': (
+    'base'    : $wisteria,
+    'dark'    : darken($wisteria, 10%),
+    'light'   : lighten($wisteria, 10%)
   )
 );
 
 // Grid
 
-$container-max-width  : 1024px;
+$container-max-width  : 1168px;
 $grid-columns         : 12;
 
 $grid-colors: (
-  '4': palette('viking', 'dark'),
-  '6': palette('chestnut-rose')
+  '3'   : palette('wisteria', 'light'),
+  '4'   : palette('piction-blue'),
+  '5'   : palette('ocean-green', 'x-light'),
+  '6'   : palette('piction-blue', 'x-dark'),
+  '7'   : palette('chestnut-rose', 'x-light'),
+  '8'   : palette('flame-pea', 'light'),
+  '12'  : palette('viking'),
 );
 
 // Theme map
+
 $ui-colors: (
   'default' : $piction-blue,
   'success' : $ocean-green,
@@ -95,4 +115,4 @@ $ui-colors: (
 // Breakpoints
 
 $breakpoint-medium  : 769px;
-$breakpoint-large   : 1500px;
+$breakpoint-large   : 920px;

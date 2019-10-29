@@ -1,6 +1,3 @@
-// Utilities
-// ==============================
-
 // Import if Google Fonts URL is defined
 
 @if variable-exists(font-url-google) {
@@ -8,6 +5,7 @@
 }
 
 // Mixins
+
 @mixin bg-colors($map) {
   @each $theme, $color in $map {
     &--#{$theme} {
@@ -19,7 +17,6 @@
   }
 }
 
-// Optional value argument if needed
 @mixin border-radius($value: $default-radius) {
   border-radius: $value;
 }
@@ -29,10 +26,49 @@
   margin-right: auto;
 }
 
+// CSS Grid
+@mixin grid {
+  display: grid;
+  grid-row-gap: 10px;
+
+  @for $i from 1 through $grid-columns {
+    .grid__col--#{$i} {
+      grid-column: span #{$i}; // Grid columns
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+  }
+}
+
+@mixin columns($column-count) {
+  @if $column-count == 'small' {
+    grid-template-columns: (1fr);;
+  }
+  @else if $column-count == 'large' {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+
+// Flexbox
+
+@mixin flexbox {
+  display: flex;
+}
+
+@mixin flex-direction($direction) {
+  @if $direction == 'column' {
+    flex-direction: column;
+  }
+  @else if $direction == 'row' {
+    flex-direction: row;
+  }
+}
+
 // Media queries
+
 @mixin media-query($breakpoint) {
 
-  // Conditional, so we can adress breakpoints with strings as argument
+  // Conditional, so we can address breakpoints with strings as argument
   @if $breakpoint == 'medium' {
     @media (min-width: $breakpoint-medium) {
       @content;
@@ -43,5 +79,4 @@
       @content;
     }
   }
-  
 }

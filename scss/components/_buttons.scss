@@ -1,25 +1,36 @@
 .btn {
   @include bg-colors($ui-colors) {
     @include center-element;
-    color: white;
+    color: $white;
     padding-top: 12px;
     padding-bottom: 12px;
     margin-bottom: em(25px, 15px);
     border: 0;
     text-transform: uppercase;
-    font-family: $font-family--primary;
     font-size: em(15px);
     font-weight: $font-weight--bold;
     display: block;
-    width: 96%;
-    
+    width: 94%;
+
     @include media-query('medium') {
       display: inline-block;
       width: initial;
-      // max-width: 15%;
-      margin-left: 3.8%;
-      padding-left: 3%;
-      padding-right: 3%;
+      margin-left: .5%;
+      padding-left: 5%;
+      padding-right: 5%;
+
+      &:first-child {
+        margin-left: 3%;
+      }
+    }
+    
+    @include media-query('large') {
+      margin-left: 2%;
+
+      &:first-child {
+        margin-left: 5%;
+      }
+
     }
   }
 }

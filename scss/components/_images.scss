@@ -2,18 +2,25 @@
   &--logo {
     @extend %img-default;
     @extend %img-margin-large;
+
+    @include media-query('medium') {
+      margin-left: 40px;
+      margin-right: 0;
+      margin-bottom: em(30px);
+    }
   }
 
   &--avatar {
     @extend %img-default;
-    @extend %img-margin-large;
+    @extend %img-margin-medium;
     @include center-element;
-    display: inline-block;
   }
   
   &--frame {
     @extend %img-default;
     @extend %img-margin-medium;
+    border: 10px solid $white;
+    outline: 1px solid $grey;
   }
 
 }

@@ -1,7 +1,6 @@
-/* Elements need to be hidden but screen readers must read out the information */
+// Hide element visually but NOT from screen readers
 
 .hidden {
-  /* Visually hide this content */
   position: absolute !important;
   height: 1px; width: 1px;
   overflow: hidden;

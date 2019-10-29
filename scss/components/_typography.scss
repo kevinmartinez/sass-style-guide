@@ -1,14 +1,19 @@
 .headline {
   &--primary {
-    font-family: $font-family--primary;
-    font-size: em(32px);
-    color: palette('viking');
-    padding: 0 10%;
+    font-size: em(30px);
+    color: $color--primary;
+    padding: 0 5%;
+    margin-bottom: em(20px);
   }
   &--secondary {
-    font-family: $font-family--primary;
-    font-size: em(20px);
+    @extend %headline-bottom-margin;
+    font-size: em(18px);
     font-weight: $font-weight--light;
-    padding: 0 8%;
+    margin-top: em(20px);
+
+    .form &, .card & {
+      @extend %headline-indent;
+      margin-bottom: em(16px);
+    }
   }
 }

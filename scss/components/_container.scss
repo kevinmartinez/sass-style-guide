@@ -1,11 +1,13 @@
 .container {
-  padding: 10% 5%;
+  font-family: $font-family--primary;
+  color: $black;
+  padding-top: 5%;
+  padding-left: 2%;
+  padding-right: 2%;
 
-  // Test media query mixin
   @include media-query('medium') {
+    @include center-element;
     padding-top: em(25px);
     max-width: $container-max-width;
-    @include center-element;
   }
-
 }

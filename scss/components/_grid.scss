@@ -1,53 +1,38 @@
 .grid__row {
-  display: grid;
-  grid-template-columns: (1fr);
-  grid-template-rows: auto;
-  grid-row-gap: 20px; // TODO 'row-gap' unsupported?
-  margin-bottom: em(10px);
+  @include grid;
+  @include columns('small');
+  margin-bottom: em(40px);
   
   // Gap for last row (grid-row-gap is top only)
   &:last-of-type {
-    justify-content: space-between;
     margin-top: 20px;
   }
 
   @include media-query('medium') {
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: auto;
+    @include columns('large');
     grid-column-gap: 10px;
     // Don't want to use grid on the container, so we must create gaps with margins
     margin-bottom: em(50px);
   }
 }
 
-@for $i from 1 through $grid-columns {
-  .grid__col--#{$i} {
-
-    //TODO Remove helper
-    border: 1px solid red;
-
-    // Grid columns
-    grid-column: span #{$i};
-
-    // TODO extend/mixin paddings for showcasing grid and buttons
-    padding-top: 12px;
-    padding-bottom: 12px;
-
-    // TODO extend/mixin? for margin bottom?
-    // margin-bottom: em(10px)
-  }
-}
-
-.theme__colors {
-  &.grid__col {
-    @include bg-colors($grid-colors);
-  }
-}
+// Centered column
 
 .centered {
   @include media-query('medium') {
     justify-self: center;
-    grid-column: 1 / -1;
-    width: 60%;
+    grid-column: 1 / -1 !important; // Override extend
+    width: 60%; // For showcase purpose
+  }
+}
+
+// Grid showcase background colors
+
+.theme__colors {
+  @extend %text-center;
+  font-weight: $font-weight--bold;
+
+  &.grid__col {
+    @include bg-colors($grid-colors);
   }
 }

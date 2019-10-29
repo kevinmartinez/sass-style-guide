@@ -1,40 +1,38 @@
 .nav {
+  @extend %text-center;
   list-style-type: none;
   padding: 0;
-  // TODO Create helper/mixin/extend
-  text-align: center;
-  display: flex;
-  flex-direction: column;
+  margin-top: -50px;
 
   @include media-query('medium') {
-    flex-direction: row;
-    justify-content: flex-end;
+    @include flexbox;
+    @include flex-direction('row');
+    align-items: stretch;
+    margin-top: 10px;
+    margin-left: 180px;
   }
 
   &__item {
     @extend %nav-item-default;
     @include border-radius;
     @include center-element;
-    // TODO Extend center
 
     a {
-      @extend %no-decoration;
-      font-family: $font-family--primary;
-      font-weight: $font-weight--light;
+      @extend %link-default;
+      font-weight: $font-weight--medium;
       letter-spacing: .5px;
 
       &:hover {
-        color: palette('viking');
+        color: $color--primary ;
       }
     }
 
     // Active button
     &:first-child {
-      background-color: palette('viking');
+      background-color: $color--primary ;
 
       a {
         color: $white;
-        font-weight: $font-weight--medium;
       }
     }
   }

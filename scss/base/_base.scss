@@ -1,17 +1,14 @@
 * {
   box-sizing: border-box;
-
-  // TODO Move to .container?
-  font-family: $font-family--primary;
-  color: $black;
 }
 
-// Base style nav 
 ul {
-  margin-bottom: em(48px);
+  margin-bottom: em(40px);
 }
 
 p {
   font-size: em(18px);
+  padding-left: 10px;
+  padding-right: 10px;
   line-height: 1.5;
 }

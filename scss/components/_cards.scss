@@ -1,8 +1,14 @@
 .card {
+    padding-left: 5%;
+    padding-right: 5%;
+
     a {
-    @extend %no-decoration;
-    color: red;
-    font-weight: $font-weight--bold;
-    color: palette('piction-blue');
-  }
+      @extend %link-default;
+      font-weight: $font-weight--bold;
+      color: $color--secondary;
+    }
+
+    @include media-query('medium') {
+      padding: 0;
+    }
 }

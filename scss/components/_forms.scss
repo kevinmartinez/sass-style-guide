@@ -8,17 +8,26 @@
     @include center-element;
     border: none;
     display: block;
-    width: 90%;
+    width: 95%;
     margin-bottom: em(25px, 15px);
     font-size: em(15px);
     font-weight: $font-weight--bold;
-    padding-left: 15px;
+    padding-left: 10px;
     padding-bottom: 15px;
-    border-bottom: 6px solid palette('viking');
+    border-bottom: 6px solid $color--primary;
 
     &:focus {
-      border-bottom: 6px solid palette('piction-blue');
+      border-bottom: 6px solid $color--secondary;
       outline: none;
     }
+  }
+
+  .btn--default {
+    width: 100%;
+    margin: 0;
+  }
+
+  @include media-query('medium') {
+    margin-left: em(20px);
   }
 }
