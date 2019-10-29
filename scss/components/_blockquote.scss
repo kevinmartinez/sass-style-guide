@@ -1,0 +1,13 @@
+.blockquote {
+  @include border-radius(5px);
+  border-left: 8px solid $color--primary;
+  padding-left: 30px;
+  font-size: em(24px);
+  font-style: italic;
+  font-weight: $font-weight--medium;
+  color: $grey;
+
+  @include media-query('medium') {
+    font-size: em(26px);
+  }
+}
